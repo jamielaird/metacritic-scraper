@@ -1,9 +1,6 @@
 import requests
-from lxml import html
-
-pageContent=requests.get('https://www.w3schools.com/xml/books.xml')
-tree = html.fromstring(pageContent.content)
-
-authors=tree.xpath('//*/bookstore/book/title')
-
-print (authors)
+response = requests.get(
+    "https://www.studential.com/personal-statement-examples/accounting-and-finance-personal-statement"
+    )
+txt = response.text
+print(txt)
